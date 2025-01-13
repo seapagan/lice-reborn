@@ -288,8 +288,7 @@ def generate_header(args: SimpleNamespace, lang: str) -> None:
             template = load_package_template(args.license, header=True)
         except OSError:
             sys.stderr.write(
-                "Sorry, no source headers are available for "
-                f"{args.license}.\n"
+                f"Sorry, no source headers are available for {args.license}.\n"
             )
             raise typer.Exit(1) from None
 
